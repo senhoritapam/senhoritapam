@@ -5,59 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senhorita Pam - Em Breve</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #f2ccc6;
-            margin: 0;
             font-family: 'Arial', sans-serif;
             text-align: center;
+            padding: 20px;
         }
         .logo {
             width: 100%;
-            height: 50%;
-            object-fit: cover;
+            max-height: 200px;
+            object-fit: contain;
             margin-bottom: 20px;
         }
         h1 {
-            font-size: 3em;
-            color: #000000;
+            font-size: 2.5em;
+            color: #000;
             margin: 10px 0;
         }
         p {
-            font-size: 1.5em;
-            color: #000000;
+            font-size: 1.3em;
+            color: #000;
         }
         .contact {
-            margin-top: 2px;
+            margin-top: 10px;
             font-size: 1.2em;
-            color: #333;
         }
         .contact a {
-            color: #050505;
+            color: #000;
             text-decoration: none;
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 10px;
         }
         .contact a img {
-            text-align: center;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
         }
         .map-container {
-            width: 50%;
-            margin-top: 10px;
-            text-align: left;
-            margin-left: 21%;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
         }
         .map {
-            width: 80%;
-            max-width: 600px;
+            width: 100%;
             height: 300px;
             border: 2px solid #000;
             border-radius: 10px;
@@ -65,22 +69,58 @@
             margin-top: 10px;
         }
         .map-link {
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
             color: #000;
             text-decoration: none;
             display: block;
             margin-bottom: 5px;
         }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            .contact a img {
+                width: 30px;
+                height: 30px;
+            }
+            .map {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            .contact a {
+                font-size: 1em;
+            }
+            .contact a img {
+                width: 25px;
+                height: 25px;
+            }
+            .map {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
     <img src="img/logo.png" alt="Logo Senhorita Pam" class="logo">
-    <h1 style="margin-top: -30px">Em breve novidades!</h1>
+    <h1>Em breve novidades!</h1>
     <div class="contact">
         <p>
             <a href="https://wa.me/5571987520726" target="_blank">
-                <img src="img/whatsapp.png" style="border-radius: 10px;" alt="WhatsApp"> (71) 98752-0726
+                <img src="img/whatsapp.png" alt="WhatsApp"> (71) 98752-0726
             </a>
         </p>
         <p>
@@ -90,17 +130,13 @@
         </p>
     </div>
     
-    <!-- Link para abrir o Google Maps diretamente -->
     <div class="map-container">
-        <!-- Mapa do Google Maps Embutido -->
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!4v1738950039509!6m8!1m7!1s7imm_H7Gcph2oeirVOzTYg!2m2!1d-12.97028374147503!2d-38.43517741058682!3f283.34802774169464!4f1.586999341511543!5f0.7820865974627469" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <p style="margin-left: -20%">
+        <p>
             Endereço: Silver shopping, loja 14 - R. das Gaivotas, 120 - Imbuí, Salvador - BA, 41720-070
         </p>
-        <br><br>
     </div>
-</div>
 </body>
 </html>
